@@ -1,4 +1,4 @@
-# Docker ENTRYPOINT Assignment 01 Documentation
+# 🐳 Docker ENTRYPOINT Assignment 01 Documentation
 
 This project was completed as part of the **[Docker Mastery Course](https://www.udemy.com/course/docker-mastery/)** by Bret Fisher.
 
@@ -6,7 +6,7 @@ The assignment demonstrates how to containerise simple CLI programs using Docker
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 entrypoint-assignment-01/
