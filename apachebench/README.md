@@ -21,3 +21,4 @@ We'll use the Ubuntu image with the apt-get package manager.
 - ApacheBench expects a URL as the last argument, so you'll need to pass that in when you run the container, and it always needs http:// or https:// in the URL, and a trailing slash after the domain name.
 - Tip: As most Linux CLI tools, ab has a --help option, so I welcome you to explore the options and customize the CMD instruction to your liking. Remember you could always build this image, then overwride the ENTRYPOINT at runtime and then play around with ab by running `docker run -it --entrypoint sh <image-name>`
 
+---

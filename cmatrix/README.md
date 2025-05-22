@@ -21,3 +21,4 @@ All we need to get started is the latest alpine image and a quick understanding 
 - Tip: Use the `--no-cache` apk flag to avoid caching the package index locally, so a command would look like `apk add --no-cache <package>`.
 - Tip: As most Linux CLI tools, cmatrix has a --help option, so I welcome you to explore the options and customize the CMD instruction to your liking. Remember you could always build this image, then overwride the ENTRYPOINT at runtime and then play around with cmatrix by running `docker run -it --entrypoint sh <image-name>`
 
+---
