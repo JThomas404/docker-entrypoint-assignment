@@ -33,7 +33,7 @@ You were tasked with creating two standalone Dockerfiles:
 
 ---
 
-## 🛠️ Part 1: CMatrix – Build & Run
+## Part 1: CMatrix – Build & Run
 
 **Dockerfile Highlights:**
 
@@ -46,6 +46,8 @@ ENTRYPOINT [ "cmatrix" ]
 CMD [ "-abs", "-C", "red" ]
 ```
 
+---
+
 ### Build the Image
 
 ```bash
@@ -53,13 +55,14 @@ cd cmatrix
 docker build -t zermatrix .
 ```
 
+---
+
 ### Run the Container
 
 ```bash
 docker run -it zermatrix
 docker run -it zermatrix -C green -b
 ```
-
 > Note: `-it` is essential for `cmatrix` to render in your terminal correctly.
 
 ---
@@ -79,12 +82,16 @@ ENTRYPOINT [ "ab", "-n", "10", "-c", "2" ]
 CMD [ "--help" ]
 ```
 
+---
+
 ### Build the Image
 
 ```bash
 cd apachebench
 docker build -t apachebench .
 ```
+
+---
 
 ### Run the Benchmark
 
@@ -93,6 +100,8 @@ docker build -t apachebench .
 ```bash
 docker run -it apachebench
 ```
+
+---
 
 **Run benchmark on a live site:**
 
@@ -165,7 +174,9 @@ Percentage of the requests served within a certain time (ms)
 * `ApacheBench, Version 2.3` – The version of the benchmarking tool.
 * Shows licensing info from the Apache Software Foundation.
 
-#### 🌐 **Target Details**
+---
+
+#### **Target Details**
 
 * **Benchmarking connectingthedotscorp.com** – The target URL.
 * **Server Software**: `AmazonS3` – Indicates the server is backed by AWS S3 (likely a static website).
@@ -173,10 +184,14 @@ Percentage of the requests served within a certain time (ms)
 * **Server Port**: `443` – HTTPS.
 * **TLS Info**: Shows the cipher and protocol used for secure communication.
 
+---
+
 #### **Document Info**
 
 * **Document Path**: `/` – Root path of the site.
 * **Document Length**: `0 bytes` – No actual HTML body content returned (e.g., empty or just headers).
+
+---
 
 #### **Test Parameters**
 
@@ -185,6 +200,8 @@ Percentage of the requests served within a certain time (ms)
 * **Complete Requests**: `10` – Total requests made.
 * **Failed Requests**: `0` – All succeeded in terms of connectivity.
 * **Non-2xx Responses**: `10` – None of the responses returned HTTP 2xx status codes (likely 403, 301, etc.).
+
+---
 
 #### **Traffic Stats**
 
@@ -197,12 +214,16 @@ Percentage of the requests served within a certain time (ms)
   * `142.464 ms` – Adjusted for concurrency (i.e., per concurrent thread).
 * **Transfer Rate**: `2.68 KB/s` – Average download rate.
 
+---
+
 #### **Connection Times (Milliseconds)**
 
 * **Connect** – Time to establish a TCP+TLS connection.
 * **Processing** – Time taken to send request and wait for full response.
 * **Waiting** – Time spent waiting after sending the request (similar to TTFB – Time to First Byte).
 * **Total** – Entire round-trip duration.
+
+---
 
 | Metric     | Min | Mean | Median | Max |
 | ---------- | --- | ---- | ------ | --- |
@@ -212,6 +233,8 @@ Percentage of the requests served within a certain time (ms)
 | **Total**  | 63  | 200  | 151    | 530 |
 
 > The variability in total time (`min=63ms`, `max=530ms`) reflects network jitter, DNS or TLS negotiation delays, or server-side latency.
+
+---
 
 #### **Percentiles**
 
